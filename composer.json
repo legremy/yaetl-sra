@@ -1,0 +1,19 @@
+{
+    "name": "gremy/sra-yaetl",
+    "autoload": {
+        "psr-4": {
+            "Gremy\\SraYaetl\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Michka",
+            "email": "le_gremy@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "fab2s/yaetl": "2",
+        "symfony/var-dumper": "6.2.x-dev"
+    }
+}
