@@ -14,6 +14,7 @@
     "minimum-stability": "dev",
     "require": {
         "fab2s/yaetl": "2",
-        "symfony/var-dumper": "6.2.x-dev"
+        "symfony/var-dumper": "6.2.x-dev",
+        "doctrine/dbal": "4.0.x-dev"
     }
 }
