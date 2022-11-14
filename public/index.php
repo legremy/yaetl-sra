@@ -10,7 +10,7 @@ use Gremy\SraYaetl\Qualifier\SraVecQualifier;
 use Gremy\SraYaetl\Transformer\SraCodeTransformer;
 use Gremy\SraYaetl\Transformer\SraTransformer;
 
-ini_set('memory_limit', '-1');
+//ini_set('memory_limit', '-1');
 ini_set('max_execution_time', '300');
 
 echo "SRA - ETL";
