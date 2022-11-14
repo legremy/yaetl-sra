@@ -12,23 +12,28 @@ class SraCodeTransformer extends TransformerAbstract
         return [
             [
                 'codes' => ['DCY', 'BDV', 'SUS', 'SDT', 'CLA', 'SER', 'AFR', 'AFU', 'ACV', 'APV', 'ALV', 'ALR', 'DAS', 'CDS'],
-                'mapping'=> ['type'=>3, 'code'=>1, 'label'=>25],
+                'mapping'=> ['code'=>1, 'label'=>25],
             ],
             [
                 'codes' => ['ABR', 'CPX', 'CRE', 'ENE', 'PMO', 'SGT', 'TFR', 'MRQ', 'PRV', 'TRA'],
-                'mapping'=> ['type'=>3, 'code'=>2, 'label'=>25],
+                //'mapping'=> ['type'=>3, 'code'=>2, 'label'=>25],
+                'mapping'=> ['code'=>2, 'label'=>25],
             ],
             [
                 'codes' => ['ADE', 'ALI', 'CAR'],
-                'mapping'=> ['type'=>3, 'code'=>3, 'label'=>25],
+                'mapping'=> ['code'=>3, 'label'=>25],
             ],
             [
-                'codes' => ['GRA', 'GRP', 'GRE'],
-                'mapping'=> ['type'=>3, 'code'=>2],
+                'codes' => ['GRA', 'GRP'],
+                'mapping'=> ['code'=>2],
+            ],
+            [
+                'codes' => ['GRE'],
+                'mapping'=> ['code'=>2, 'libelle'=>35],
             ],
             [
                 'codes' => ['MOD', 'MRV'],
-                'mapping'=> ['type'=>3, 'code-marque'=>2, 'code-modele'=>2, 'label-modele'=>25, 'code-segment'=>2],
+                'mapping'=> ['code-marque'=>2, 'code-modele'=>2, 'label-modele'=>25, 'code-segment'=>2],
             ],
         ];
     }
@@ -39,7 +44,7 @@ class SraCodeTransformer extends TransformerAbstract
 
         foreach ($this->getSraCodeMapClassification() as $mapClassification) {
             if (in_array($code, $mapClassification['codes'])) {
-                $offset = 0;
+                $offset = 3;
                 foreach ($mapClassification['mapping'] as $label=>$length) {
                     $return[] = trim(substr($param, $offset, $length));
                     $offset += $length;

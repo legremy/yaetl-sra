@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'type_codification' =>[0, 3],
+    //'type_codification' =>[0, 3],
     'code_auto' => [3, 7],
     'numero_ordre' => [10, 6],
     'code_marque_vehicule' => [16, 2],
